@@ -7,6 +7,9 @@ app.use(express.static('public'));
 app.get('/', (req, res) => {
   res.render('index');
 });
+app.get('/take-action', (req, res) => {
+  res.render('take-action');
+});
 
 app.get('/your-city', async (req, res) => {
   const apiKey = '4582102f-35ae-4624-a96d-f28464c3b427';

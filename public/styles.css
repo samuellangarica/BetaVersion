@@ -28,7 +28,14 @@ body{
 #nav .item:hover{
     background-color: var(--dark_green);
 }
-.content-your-city{
+#content-your-city{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#content-take-action{
     width: 100vw;
     display: flex;
     flex-direction: column;
@@ -57,4 +64,29 @@ body{
 .content-box p{
     padding-left: 10px;
     padding-right: 10px;
+}
+.img-content-box{
+    width: 700px;
+    background-color: var(--dark_green);
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+.img-content-box p{
+    font-size: larger;
+    font-weight: bold;
+}
+.img-content-box img{
+    width: 200px;
+    height: 200px;
+    min-width: 200px;
+    min-height: 200px;
+    max-height: 200px;
+    min-height: 200px;
+    border: solid red 1px;
+}
+.img-content-box li{
+    padding: 10px;
 }
