@@ -1,14 +1,17 @@
 const express = require('express');
 const app = express();
+app.use(express.static('public'));
 app.set('view engine', 'ejs');
 app.set('views', __dirname + '/views');
-app.use(express.static('public'));
 
 app.get('/', (req, res) => {
   res.render('index');
 });
 app.get('/take-action', (req, res) => {
   res.render('take-action');
+});
+app.get('/about-climate-change', (req, res) => {
+  res.render('about-climate-change');
 });
 
 app.get('/your-city', async (req, res) => {

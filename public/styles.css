@@ -5,6 +5,7 @@
 body{
     background-color: var(--light_green);
 }
+/* Navbar */
 #nav{
     background-color: var(--dark_green);
     width: 100vw;
@@ -19,15 +20,18 @@ body{
     font-weight: bold;
     text-decoration: none;
     width: 150px;
-    height: 30px;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: var(--light_green);
+    text-align: center;
 }
 #nav .item:hover{
     background-color: var(--dark_green);
 }
+
+/* Views Content */
 #content-your-city{
     width: 100vw;
     display: flex;
@@ -42,6 +46,11 @@ body{
     align-items: center;
     justify-content: center;
 }
+#content-index {
+    width: 100vw;
+}
+/*  */
+
 .content-box{
     width: 60vw;
     background-color: var(--dark_green);
@@ -89,4 +98,33 @@ body{
 }
 .img-content-box li{
     padding: 10px;
+}
+
+/* INDEX */
+
+/* Side Bar */
+.side-bar {
+    border: solid rgba(255, 0, 0, 0) 1px;
+    width: 25%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    border-right: solid var(--dark_green) 3px;
+}
+.side-bar a{
+    text-decoration: none;
+    color: white;
+    background-color: #0d6dfdee;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-size: larger;
+}
+.side-bar a:hover{
+    background-color: #ffd153;
+    color: #0d6efd;
 }
