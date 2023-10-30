@@ -1,15 +1,17 @@
 :root{
     --dark_green: #0d490aa9;
     --light_green: #8cb77e;
+    --yellow: #ffd153;
 }
 body{
+    font-family: Georgia;
     background-color: var(--light_green);
 }
 /* Navbar */
 #nav{
     background-color: var(--dark_green);
-    width: 100vw;
-    height: 100px;
+    margin: 10px;
+    height: 80px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -24,12 +26,32 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--light_green);
+    background-color: rgba(255, 0, 0, 0);
     text-align: center;
 }
 #nav .item:hover{
-    background-color: var(--dark_green);
+    border-bottom: solid var(--yellow) 4px;
 }
+@media (max-width: 768px) {
+    body {
+        display: flex;
+        flex-direction: row;
+    }
+    #nav {
+        flex-direction: column;
+        position: fixed;
+        margin: 0;
+        width: 30vw;
+        height: 100vh;
+        transition: all 1s;
+    }
+    #nav .item{
+        background-color: rgba(255, 0, 0, 0);
+    }
+    #nav .item:hover{
+        border-bottom: solid var(--yellow) 3px;
+    }
+  }
 
 /* Views Content */
 #content-your-city{
@@ -48,6 +70,30 @@ body{
 }
 #content-index {
     width: 100vw;
+    display: flex;
+    flex-direction: row;
+}
+@media (max-width: 768px){
+    .content-box{
+        align-self: flex-end;
+        margin-right: 20px;
+        right: 0;
+    }
+    .img-content-box{
+        align-self: flex-end;
+        margin-right: 20px;
+        right: 0;
+    }
+    h1{
+        display: none;
+    }
+}
+#sub-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    text-align: center;
 }
 /*  */
 
@@ -60,6 +106,9 @@ body{
     text-align: center;
     align-items: center;
     justify-content: center;
+}
+.content-box .text{
+    color: white;
 }
 .content-box .row{
     display: flex;
@@ -76,6 +125,7 @@ body{
 }
 .img-content-box{
     width: 700px;
+    padding: 10px;
     background-color: var(--dark_green);
     display: flex;
     flex-direction: row;
@@ -94,10 +144,18 @@ body{
     min-height: 200px;
     max-height: 200px;
     min-height: 200px;
-    border: solid red 1px;
+    padding: 10px;
 }
 .img-content-box li{
     padding: 10px;
+}
+@media (max-width: 768px){
+    .img-content-box{
+        width: 50vw;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 /* INDEX */
@@ -127,4 +185,11 @@ body{
 .side-bar a:hover{
     background-color: #ffd153;
     color: #0d6efd;
+}
+@media (max-width: 768px){
+    .side-bar {
+        display: none;
+    }
+    h2{
+    }
 }
