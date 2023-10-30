@@ -16,6 +16,7 @@ body{
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    transition: all 0.5s;
 }
 #nav .item{
     color: white;
@@ -78,11 +79,13 @@ body{
         align-self: flex-end;
         margin-right: 20px;
         right: 0;
+        transition: all 0.5s;
     }
     .img-content-box{
         align-self: flex-end;
         margin-right: 20px;
         right: 0;
+        transition: all 0.5s;
     }
     h1{
         display: none;
@@ -106,6 +109,7 @@ body{
     text-align: center;
     align-items: center;
     justify-content: center;
+    border: solid var(--yellow) 3px;
 }
 .content-box .text{
     color: white;
@@ -132,6 +136,7 @@ body{
     border-radius: 10px;
     justify-content: center;
     margin-bottom: 30px;
+    border: solid var(--yellow) 3px;
 }
 .img-content-box p{
     font-size: larger;
@@ -172,7 +177,8 @@ body{
 .side-bar a{
     text-decoration: none;
     color: white;
-    background-color: #0d6dfdee;
+    /* 0d6dfdee */
+    background-color: #e08721ee;
     border-radius: 10px;
     display: flex;
     justify-content: center;
@@ -184,7 +190,7 @@ body{
 }
 .side-bar a:hover{
     background-color: #ffd153;
-    color: #0d6efd;
+    color: black;
 }
 @media (max-width: 768px){
     .side-bar {
