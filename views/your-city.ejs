@@ -1,9 +1,30 @@
-<%- include('template/head') %>
+<%- include('template/head') %> 
 <body>
   <%- include('template/navbar') %>
-  <h1>Your Weather</h1>
-  <p>
-    <%= weatherData.data.city %>
-  </p>
+
+  <div class="content-your-city">
+    
+    <h1>Your City: <%= weatherData.data.city %></h1>
+
+    <div class="content-box" id="current-pollution">
+      <h1>Current pollution</h1>
+
+      <div class="row">
+        <p class="title">Air Quality Index (AQI US): </p>
+        <p class="value"><%= weatherData.data.current.pollution.aqius %></p>
+      </div>
+      <div class="row">
+        <p class="title">Air Quality Index (AQI CN): </p>
+        <p class="value"><%= weatherData.data.current.pollution.aqicn %></p>
+      </div>
+      <div class="row">
+        <p class="title">Timestamp: </p>
+        <p class="value"><%= weatherData.data.current.pollution.ts.slice(0, 10) %></p>
+      </div>
+
+    </div>
+    
+  </div>
+
 </body>
 </html>

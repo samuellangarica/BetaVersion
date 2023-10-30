@@ -28,3 +28,33 @@ body{
 #nav .item:hover{
     background-color: var(--dark_green);
 }
+.content-your-city{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.content-box{
+    width: 60vw;
+    background-color: var(--dark_green);
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.content-box .row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.content-box .title {
+    color: white;
+    font-weight: bold;
+}
+.content-box p{
+    padding-left: 10px;
+    padding-right: 10px;
+}

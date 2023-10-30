@@ -16,6 +16,9 @@ app.get('/your-city', async (req, res) => {
     const response = await fetch(url);
     const data = await response.json();
     console.log("Correct!---------------");
+    if (data.status == 'fail'){
+      //handle too many requests 
+    }
     console.log(data);
     res.render('your-city', { weatherData: data });
   } catch (error) {
