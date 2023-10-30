@@ -8,9 +8,8 @@ app.get('/', (req, res) => {
   res.render('index');
 });
 
-app.get('/get-temperature', async (req, res) => {
+app.get('/your-city', async (req, res) => {
   const apiKey = '4582102f-35ae-4624-a96d-f28464c3b427';
-  const year = req.query.year;
   const url = `http://api.airvisual.com/v2/nearest_city?key=${apiKey}`; // GET data for nearest city using IP afdress
 
   try {
@@ -18,7 +17,7 @@ app.get('/get-temperature', async (req, res) => {
     const data = await response.json();
     console.log("Correct!---------------");
     console.log(data);
-    res.render('weather-result', { weatherData: data });
+    res.render('your-city', { weatherData: data });
   } catch (error) {
     res.send('Error retrieveing data!');
   }

@@ -1,3 +1,30 @@
+:root{
+    --dark_green: #0d490aa9;
+    --light_green: #8cb77e;
+}
 body{
-    background-color: aqua;
+    background-color: var(--light_green);
+}
+#nav{
+    background-color: var(--dark_green);
+    width: 100vw;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+#nav .item{
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    width: 150px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--light_green);
+}
+#nav .item:hover{
+    background-color: var(--dark_green);
 }
