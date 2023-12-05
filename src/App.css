@@ -7,6 +7,23 @@ body{
   font-family: Georgia;
   background-color: var(--light_green);
 }
+
+/*Title*/
+#title{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+  color: white;
+  font-size: 3rem;
+}
+
+#title .text{
+   vertical-align: middle;
+}
+
 /* Navbar */
 #nav{
   background-color: var(--dark_green);
@@ -17,6 +34,7 @@ body{
   justify-content: space-around;
   align-items: center;
   transition: all 0.5s;
+  font-family: 'Roboto', sans-serif;
 }
 #nav .item{
   color: white;

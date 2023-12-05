@@ -1,15 +1,10 @@
 import React from 'react';
 
-import Head from '../../components/Head';
-import Navbar from '../../components/Navbar';
-
 function TakeAction() {
   return (
     <>
-      <Head />
 
       <body>
-        <Navbar />
 
         <div className="content" id="content-take-action">
           <h1>Take Action</h1>

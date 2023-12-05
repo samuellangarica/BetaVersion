@@ -1,41 +1,36 @@
 const express = require('express');
-const app = express();
-
+const path = require('path');
 const fetch = require('node-fetch');
 
-app.use(express.static('public'));
-app.set('view engine', 'ejs');
-app.set('views', __dirname + '/views');
+const app = express();
+const port = process.env.PORT || 3000;
 
-app.get('/', (req, res) => {
-  res.render('index');
-});
-app.get('/take-action', (req, res) => {
-  res.render('take-action');
-});
-app.get('/about-climate-change', (req, res) => {
-  res.render('about-climate-change');
-});
+app.use(express.static(path.join(__dirname, 'build')));
 
-app.get('/your-city', async (req, res) => {
+app.get('/api/your-city', async (req, res) => {
   const apiKey = '4582102f-35ae-4624-a96d-f28464c3b427';
-  const url = `http://api.airvisual.com/v2/nearest_city?key=${apiKey}`; // GET data for nearest city using IP address
+  const url = `http://api.airvisual.com/v2/nearest_city?key=${apiKey}`;
 
   try {
     const response = await fetch(url);
     const data = await response.json();
-    console.log("Correct!---------------");
-    if (data.status == 'fail'){
-      //handle too many requests 
+
+    if (data.status === 'fail') {
+      res.status(500).json({ error: 'Error fetching data' });
+      return;
     }
-    console.log(data);
-    res.render('your-city', { weatherData: data });
+
+    res.json(data);
   } catch (error) {
-    res.send('Error retrieveing data!');
+    res.status(500).json({ error: 'Error fetching data' });
   }
 });
 
-const port = 3000;
+// Serve your React app
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
+
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });

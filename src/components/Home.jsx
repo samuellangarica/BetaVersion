@@ -1,12 +1,10 @@
 import React from 'react';
-import Navbar from '../../components/Navbar';
 
-function Body() {
+function Home() {
   return (
     <>
-      <Navbar />
       <div className="content" id="content-index">
-        <div className="side-bar">
+        {/*<div className="side-bar">
           <a href="#">
             <h6>What is Climate Change?</h6>
           </a>
@@ -19,7 +17,7 @@ function Body() {
           <a href="#">
             <h6>About UN's goal 13</h6>
           </a>
-        </div>
+  </div>*/}
 
         <div id="sub-content">
           <h2>What is Climate Change?</h2>
@@ -35,4 +33,4 @@ function Body() {
   );
 }
 
-export default Body;
+export default Home;
