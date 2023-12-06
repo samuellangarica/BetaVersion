@@ -6,6 +6,13 @@ function TakeAction() {
       <body>
         <div className="content" id="content-take-action">
           <h1>Take Action</h1>
+          
+          <div className="content-box">
+            <p className="text">
+            On this page, discover actionable steps you can take to contribute to climate action. Whether you're an individual,
+            a community, or a business, there's something everyone can do to make a positive impact.
+            </p>
+          </div>
 
           <div className="img-content-box">
             <img src="../images/earth-water.png" width="200px" height="200px" alt="water-drop-icon" />
