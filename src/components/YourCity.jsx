@@ -7,7 +7,7 @@ function YourCity() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('/api/your-city');
+        const response = await fetch('http://localhost:3000/your-city');
         const data = await response.json();
 
         if (response.ok && data) {
@@ -29,15 +29,15 @@ function YourCity() {
     return <p>Loading...</p>;
   }
 
-  if (!weatherData || !weatherData.data || !weatherData.data.current || !weatherData.data.current.pollution) {
+  if (!weatherData || !weatherData.current || !weatherData.current.pollution) {
     return <p>Data not available.</p>;
   }
-
+  
   const {
     city,
     current: { pollution },
-  } = weatherData.data;
-
+  } = weatherData;
+  
   return (
     <>
       <div className="content" id="content-your-city">
@@ -59,7 +59,7 @@ function YourCity() {
         </div>
       </div>
     </>
-  );
+  );  
 }
 
 export default YourCity;

@@ -25,7 +25,7 @@ function App() {
 
           <Routes>
             <Route path='/' exact Component={ Home }></Route>
-            <Route path='/yourcity' Component={ YourCity }></Route>
+            <Route path='/your-city' Component={ YourCity }></Route>
             <Route path='/takeaction' Component={ TakeAction}></Route>
             <Route path='/about-climate-change' Component={ About}></Route>
             
