@@ -33,7 +33,7 @@ function Home() {
             <p className="text">
             <b>Our mission is clear:</b> to empower individuals and communities to contribute to UN Goal #13: 
             Climate Action. Together, we strive to create a world that prioritizes environmental responsibility
-            and resilience.
+            and resilience. 
             </p>
         </div>
 
