@@ -28,8 +28,18 @@ function Home() {
             </p>
             <p className='text'>Explore and understand the impact of climate change on our planet. Join us in the journey to make a difference and create a positive impact for generations to come.</p>
           </div>
+
+          <div className="content-box">
+            <p className="text">
+            <b>Our mission is clear:</b> to empower individuals and communities to contribute to UN Goal #13: 
+            Climate Action. Together, we strive to create a world that prioritizes environmental responsibility
+            and resilience.
+            </p>
         </div>
-        
+
+          
+        </div>
+
       </div>
     </>
   );
