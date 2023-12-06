@@ -51,7 +51,8 @@ app.post('/google-login', async (req, res) => {
   }
 });
 
-app.get('/api/your-city', async (req, res) => {
+//API
+app.get('/your-city', async (req, res) => {
   const apiKey = '4582102f-35ae-4624-a96d-f28464c3b427';
   const url = `http://api.airvisual.com/v2/nearest_city?key=${apiKey}`;
 
@@ -59,17 +60,19 @@ app.get('/api/your-city', async (req, res) => {
     const response = await fetch(url);
     const data = await response.json();
 
-    if (data.status === 'fail') {
-      res.status(500).json({ error: 'Error fetching data' });
-      return;
-    }
+    console.log('AirVisual API Response:', data);
 
-    res.status(200).json(data.data);
+    if (response.ok && data) {
+      res.status(200).json(data.data);
+    } else {
+      res.status(500).json({ error: 'Error fetching data' });
+    }
   } catch (error) {
     console.error('Error fetching data:', error);
     res.status(500).json({ error: 'Internal Server Error' });
   }
 });
+
 
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
