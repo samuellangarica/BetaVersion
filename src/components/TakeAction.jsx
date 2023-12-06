@@ -3,9 +3,7 @@ import React from 'react';
 function TakeAction() {
   return (
     <>
-
       <body>
-
         <div className="content" id="content-take-action">
           <h1>Take Action</h1>
 
