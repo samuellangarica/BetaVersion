@@ -24,10 +24,22 @@ function Home() {
 
           <div className="content-box">
             <p className="text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non velit mi. Quisque condimentum quam dolor, vel fermentum ex rutrum eget. Etiam malesuada ornare dui eget facilisis. Aliquam luctus sagittis libero. Aliquam erat volutpat. Vestibulum ac odio nisi. Nam tempor lacus sit amet ligula venenatis venenatis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Interdum et malesuada fames ac ante ipsum primis in faucibus.
+            Welcome to CliChange, your go-to platform for taking meaningful action against climate change. Here, we believe that every small effort contributes to a greener, more sustainable future.
             </p>
+            <p className='text'>Explore and understand the impact of climate change on our planet. Join us in the journey to make a difference and create a positive impact for generations to come.</p>
           </div>
+
+          <div className="content-box">
+            <p className="text">
+            <b>Our mission is clear:</b> to empower individuals and communities to contribute to UN Goal #13: 
+            Climate Action. Together, we strive to create a world that prioritizes environmental responsibility
+            and resilience.
+            </p>
         </div>
+
+          
+        </div>
+
       </div>
     </>
   );

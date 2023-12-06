@@ -9,6 +9,7 @@ import Navigation from './components/Navigation.jsx';
 import YourCity from './components/YourCity.jsx';
 import TakeAction from './components/TakeAction.jsx';
 import Home from './components/Home.jsx';
+import About from './components/About.jsx';
 
 function App() {
   return (
@@ -26,6 +27,8 @@ function App() {
             <Route path='/' exact Component={ Home }></Route>
             <Route path='/your-city' Component={ YourCity }></Route>
             <Route path='/takeaction' Component={ TakeAction}></Route>
+            <Route path='/about-climate-change' Component={ About}></Route>
+            
           </Routes>
           
         </Router>
